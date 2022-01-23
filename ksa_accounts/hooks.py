@@ -179,3 +179,17 @@ user_data_fields = [
 # 	"ksa_accounts.auth.validate"
 # ]
 
+fixtures = [
+	{
+		"dt":
+		"Custom Field",
+		"filters": [[
+			"name", "in",
+			[
+				'Account-ksa_account_position',
+				'Account-ksa_account_title',
+				'Account-ksa_account_type'
+			]
+		]]
+	}
+]
