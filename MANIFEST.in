@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include ksa_accounts *.css
+recursive-include ksa_accounts *.csv
+recursive-include ksa_accounts *.html
+recursive-include ksa_accounts *.ico
+recursive-include ksa_accounts *.js
+recursive-include ksa_accounts *.json
+recursive-include ksa_accounts *.md
+recursive-include ksa_accounts *.png
+recursive-include ksa_accounts *.py
+recursive-include ksa_accounts *.svg
+recursive-include ksa_accounts *.txt
+recursive-exclude ksa_accounts *.pyc
