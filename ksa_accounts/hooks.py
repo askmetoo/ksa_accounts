@@ -95,13 +95,12 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"validate": "ksa_accounts.events.accounts.sales_invoice.create_advance_retention_entry",
+		"on_submit": "ksa_accounts.events.accounts.sales_invoice.create_advance_retention_entry"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -188,7 +187,11 @@ fixtures = [
 			[
 				'Account-ksa_account_position',
 				'Account-ksa_account_title',
-				'Account-ksa_account_type'
+				'Account-ksa_account_type',
+				'Sales Invoice-apply_advance_deduction',
+				'Sales Invoice-apply_retention_deduction',
+				'Sales Invoice-advance_deduction_percentage',
+				'Sales Invoice-retention_deduction_percentage'
 			]
 		]]
 	}

@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-05-14 16:26:22.016286",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sale_contract_section",
+  "advance_account",
+  "retention_account",
+  "column_break_4",
+  "enable_deduction",
+  "do_not_allow_to_create_sales_invoice_without_project"
+ ],
+ "fields": [
+  {
+   "fieldname": "sale_contract_section",
+   "fieldtype": "Section Break",
+   "label": "Sale Contract"
+  },
+  {
+   "fieldname": "advance_account",
+   "fieldtype": "Link",
+   "label": "Advance Account",
+   "mandatory_depends_on": "eval: doc.enable_deduction == 1",
+   "options": "Account"
+  },
+  {
+   "fieldname": "retention_account",
+   "fieldtype": "Link",
+   "label": "Retention Account",
+   "mandatory_depends_on": "eval: doc.enable_deduction == 1",
+   "options": "Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "do_not_allow_to_create_sales_invoice_without_project",
+   "fieldtype": "Check",
+   "label": "Do not allow to create sales invoice without project"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_deduction",
+   "fieldtype": "Check",
+   "label": "Enable Deduction"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2022-05-15 12:08:00.749296",
+ "modified_by": "Administrator",
+ "module": "KSA Accounts",
+ "name": "KSA Accounts Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
